@@ -42,7 +42,7 @@ header .highlight {
 /* Navigation */
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
   background-color: #222;
   padding: 0.75rem;
