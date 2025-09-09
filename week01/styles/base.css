@@ -52,6 +52,22 @@ nav {
   padding: 0.75rem;
 }
 
+.site-nav {
+    background: var(--brand-800);
+    margin-top: .5rem;
+    border-radius: var(--r) var(--r) 0 0;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: .25rem;
+    margin: 0;
+    padding: .5rem 0;
+}
+
 nav a {
   color: white;
   text-decoration: none;
