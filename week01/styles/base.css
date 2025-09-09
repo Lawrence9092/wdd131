@@ -154,8 +154,9 @@ main h1 {
 
 .about-me img,
 .country img {
-  max-width: 150px;
-  border-radius: 6px;
+  max-width: 120px;
+  height: auto;
+  margin-right: 2rem;
 }
 
 /* Footer */
