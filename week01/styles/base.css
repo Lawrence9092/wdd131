@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 
 /* Global Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -31,91 +32,43 @@ header h1 {
 }
 
 header h1 span {
-  display: block;      /* makes span take full width */
-  text-align: center;  /* centers text inside span */
-  font-weight: bold;
-  color: #ffd700;      /* gold highlight */
-}
-
-header .highlight {
-  color: #ffd700; /* gold highlight */
-}
-
-#course-title {
-  display: block; /* ensures span can be centered easily */
+  display: block;
   text-align: center;
+  font-weight: bold;
+  color: #ffd700;
 }
 
-/* Navigation */
+/* Navigation bar (below header) */
 nav {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 2rem;
-  background-color: white;   /* changed to white */
-  padding: 0.75rem;
-}
-
-/* top-level links */
-nav a {
-  color: #222;               /* dark text for visibility */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #0077cc;            /* nice blue hover */
-}
-
-/* if you’re using a <ul> inside nav */
-nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  list-style: none;
-  background-color: blue;   /* match white background */
+  background-color: #222;   /* dark background like sample */
   padding: 0.75rem;
 }
 
-nav ul li a {
-  color: #222;               /* dark link color */
+nav a {
+  color: white;
   text-decoration: none;
+  font-weight: 500;
   padding: 0.5rem 1rem;
-  transition: background 0.3s, color 0.3s;
   border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* hover + active effect */
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #0077cc; /* blue background */
-  color: white;              /* white text */
+nav a:hover,
+nav a.active {
+  background-color: #ffd700; /* gold hover */
+  color: #222;
 }
-
-
 
 /* Main Layout */
 main {
+  max-width: 960px;
+  margin: 2rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr; /* About Me + Web Dev Resources */
   gap: 1.5rem;
-  padding: 2rem;
-}
-
-main {
-  max-width: 960px;     /* limit width */
-  margin: 2rem auto;    /* centers horizontally */
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2-column grid */
-  gap: 1.5rem;
-}
-
-
-main h1 {
-  grid-column: span 2;
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 /* Card Styles */
@@ -127,28 +80,20 @@ main h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .card h2 {
+  background-color: #004466; /* title bar style */
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
   margin-bottom: 1rem;
-  color: #004466;
+  font-size: 1.2rem;
 }
 
-.card h2 {
-  margin-bottom: 1rem;
-  color: #004466;
-}
-
+/* About Me and Country sections */
 .about-me,
 .country {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -156,7 +101,6 @@ main h1 {
 .country img {
   max-width: 120px;
   height: auto;
-  margin-right: 2rem;
 }
 
 /* Footer */
@@ -167,8 +111,4 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
-}
-
-footer span {
-  font-weight: bold;
 }
