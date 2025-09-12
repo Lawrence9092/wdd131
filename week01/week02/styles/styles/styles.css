@@ -3,6 +3,27 @@
 	padding: 0;
 }
 
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu.open::before {
+  content: "✕";
+}
+
+.navigation a.active {
+  background-color: #444;
+  font-weight: bold;
+  border-bottom: 3px solid yellow;
+}
+
+
 body {
 	height: 100vh;
 	display: flex;
