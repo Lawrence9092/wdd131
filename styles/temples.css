@@ -60,6 +60,13 @@ nav a:hover {
   text-decoration: underline double;
 }
 
+.site-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem; /* adjust as needed */
+  font-weight: 600;
+}
+
+
 .active {
   color: yellow;
 }
