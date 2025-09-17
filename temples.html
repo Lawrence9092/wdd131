@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 740px)">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script src="scripts/temples.js" defer></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
 </head>
 <body>
   <header>   
@@ -71,7 +75,7 @@
     </figure>
   </main>
   <footer>
-     <p> © 2025 Lawrence Ngwenya </p>
+     <p>© <span id="year"></span> Lawrence Ngwenya</p>
   </footer>
 </body>
 </html>
