@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 740px)">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("year").textContent = new Date().getFullYear();
-      });
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <!-- Mobile-first CSS then larger view overrides -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 740px)">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Defer JS to avoid blocking and ensure DOM is loaded -->
+  <script src="scripts/temples.js" defer></script>
 </head>
 <body>
-  <header>   
-    <span class="site-title">Temple Album</span>
-    <nav>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <span class="site-title">Temple Album</span>
+
+      <!-- Hamburger button for mobile. aria-controls points to the nav -->
+      <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-icon" aria-hidden="true">☰</span>
+      </button>
+    </div>
+
+    <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
+        <li><a class="nav-link" href="#">Home</a></li>
+        <li><a class="nav-link" href="#">Old</a></li>
+        <li><a class="nav-link" href="#">New</a></li>
+        <li><a class="nav-link" href="#">Large</a></li>
+        <li><a class="nav-link" href="#">Small</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Temple Gallery</h1>
 
-    <figure>
-      <img src="images/billings-montana-temple.jpg" alt="Montana Temple">
-      <figcaption>Montana Temple</figcaption>
-    </figure>
+  <main id="main">
+    <h1 class="page-heading">Temple Gallery</h1>
 
-    <figure>
-      <img src="images/bern-switzerland-temple.jpg" alt="Switzerland Temple">
-      <figcaption>Switzerland Temple</figcaption>
-    </figure>
+    <!-- Use semantic grid for figures; images have lazy loading to reduce page weight -->
+    <section class="gallery" aria-label="Temples gallery">
+      <figure>
+        <img src="images/billings-montana-temple.jpg" alt="Billings Montana Temple" loading="lazy">
+        <figcaption>Montana Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/atlanta-georgia-temple.jpg" alt="Atlanta Temple">
-      <figcaption>Atlanta Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/bern-switzerland-temple.jpg" alt="Bern Switzerland Temple" loading="lazy">
+        <figcaption>Switzerland Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/apia-samoa-temple.jpg" alt="Samoa Temple">
-      <figcaption>Samoa Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/atlanta-georgia-temple.jpg" alt="Atlanta Georgia Temple" loading="lazy">
+        <figcaption>Atlanta Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/anchorage-temple.jpg" alt="Anchorage Temple">
-      <figcaption>Anchorage Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/apia-samoa-temple.jpg" alt="Apia Samoa Temple" loading="lazy">
+        <figcaption>Samoa Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/adelaide-temple.jpg" alt="Adelaide Temple">
-      <figcaption>Adelaide Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/anchorage-temple.jpg" alt="Anchorage Alaska Temple" loading="lazy">
+        <figcaption>Anchorage Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/albuquerque-temple.jpg" alt="Alburquerque Temple">
-      <figcaption>Alburquerque Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/adelaide-temple.jpg" alt="Adelaide Temple" loading="lazy">
+        <figcaption>Adelaide Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/accra-temple.jpg" alt="Accra Temple">
-      <figcaption>Accra Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/albuquerque-temple.jpg" alt="Albuquerque Temple" loading="lazy">
+        <figcaption>Albuquerque Temple</figcaption>
+      </figure>
 
-    <figure>
-      <img src="images/aba-temple.jpg" alt="Aba Temple">
-      <figcaption>Aba Temple</figcaption>
-    </figure>
+      <figure>
+        <img src="images/accra-temple.jpg" alt="Accra Temple" loading="lazy">
+        <figcaption>Accra Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/aba-temple.jpg" alt="Aba Temple" loading="lazy">
+        <figcaption>Aba Temple</figcaption>
+      </figure>
+    </section>
   </main>
-  <footer>
-     <p>© <span id="year"></span> Lawrence Ngwenya</p>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> Lawrence Ngwenya — Last modified: <span id="last-modified"></span></p>
   </footer>
 </body>
 </html>

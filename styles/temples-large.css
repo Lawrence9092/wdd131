@@ -1,28 +1,43 @@
-/* temples-large.css - Larger screens (min-width: 768px) */
+/* Larger screens overrides (desktop & tablet) */
+@media (min-width: 740px) {
+  .site-header {
+    padding: 1rem 2rem;
+  }
 
-/* Layout for gallery */
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .header-inner { gap: 1rem; }
 
-main h1 {
-  font-size: 2rem;
-}
+  /* Hamburger hidden on larger screens */
+  .hamburger { display: none; }
 
-/* Grid layout for figures */
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
+  /* Show nav as horizontal row on larger view */
+  .primary-nav {
+    display: block !important;
+    margin-top: 0;
+  }
+  .primary-nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .primary-nav a {
+    padding: 0.6rem 0.9rem;
+    font-size: 1rem;
+  }
 
-figure {
-  margin: 0;
-  text-align: center;
-}
+  /* layout: header content inline and nav to right */
+  .site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-figure img {
-  max-width: 100%;
+  /* Gallery: responsive multi-column grid */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem 2rem 2rem 2rem;
+  }
+
+  .page-heading { font-size: 1.25rem; }
 }
