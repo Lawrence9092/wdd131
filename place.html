@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover Japan</title>
+  <title>Country Page | Japan</title>
+  <!-- CSS Link -->
   <link rel="stylesheet" href="css/place.css">
+  <!-- JavaScript Link -->
   <script defer src="js/place.js"></script>
 </head>
 <body>
@@ -21,41 +23,47 @@
   </header>
 
   <main>
-    <!-- Hero section -->
+    <!-- Hero section with responsive images -->
     <section class="hero">
       <picture>
-        <source media="(min-width: 1000px)" srcset="images/japan-large.jpg">
-        <source media="(min-width: 500px)" srcset="images/japan-medium.jpg">
-        <img src="images/japan-small.jpg" alt="Mount Fuji with cherry blossoms" width="1500" height="750">
+        <!-- Large image for wide screens -->
+        <source media="(min-width: 1000px)" srcset="images/hero-large.jpg">
+        <!-- Medium image for tablet-size screens -->
+        <source media="(min-width: 500px)" srcset="images/hero-medium.jpg">
+        <!-- Fallback / small image -->
+        <img src="images/hero-small.jpg" 
+             alt="Mount Fuji and cherry blossoms in Japan" 
+             width="1500" height="750">
       </picture>
       <h2>Land of the Rising Sun</h2>
     </section>
 
-    <!-- Content sections -->
+    <!-- Content sections following wireframe -->
     <section id="history">
       <h2>History</h2>
-      <p>Japan has a rich history spanning thousands of years, from ancient samurai traditions to modern innovation.</p>
+      <p>Japan’s history spans thousands of years, blending ancient traditions with modern advancements.</p>
     </section>
 
     <section id="culture">
       <h2>Culture</h2>
-      <p>Japanese culture blends the old and new, with tea ceremonies, anime, technology, and Shinto shrines coexisting.</p>
+      <p>From tea ceremonies and temples to anime and technology, Japanese culture is a balance of old and new.</p>
     </section>
 
     <section id="food">
       <h2>Food</h2>
-      <p>Sushi, ramen, tempura, and matcha are just some of the famous dishes from Japan’s diverse cuisine.</p>
+      <p>Sushi, ramen, tempura, and matcha are famous worldwide and represent Japan’s diverse cuisine.</p>
     </section>
 
     <section id="gallery">
       <h2>Gallery</h2>
-      <img src="images/sushi.jpg" alt="Japanese sushi platter">
-      <img src="images/temple.jpg" alt="Traditional Japanese temple">
+      <img src="images/sushi.jpg" alt="Sushi platter" width="400" height="300">
+      <img src="images/temple.jpg" alt="Traditional Japanese temple" width="400" height="300">
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 | Your Name | WDD131 Assignment</p>
+    <p>&copy; 2025 | Your Name | WDD131 - Country Page Assignment</p>
   </footer>
 </body>
 </html>
+
