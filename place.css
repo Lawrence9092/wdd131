@@ -80,3 +80,15 @@ section {
     justify-content: center;
   }
 }
+
+.weather-icon {
+  display: none; /* hidden by default (mobile view) */
+}
+
+@media (min-width: 600px) {
+  .weather-icon {
+    display: inline; /* show in wider view */
+    margin-left: 0.5rem;
+  }
+}
+
