@@ -53,6 +53,17 @@ section {
   }
 }
 
+@media (min-width: 640px) {
+    .data {
+        width: 300px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        background-color: var(--bg-color);
+        padding: 10px;
+    }
+}
+
 footer {
   background: #f4f4f4;
   padding: 1rem;
