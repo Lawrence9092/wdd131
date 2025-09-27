@@ -36,6 +36,7 @@ section {
 .weather-icon {
   display: none;
 }
+
 @media (min-width: 600px) {
   .weather-icon {
     display: inline;
@@ -44,12 +45,13 @@ section {
 }
 
 @media (min-width: 640px) {
-    .hero picture {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-    }
+  .hero picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+}
 
 footer {
   background: #f4f4f4;
