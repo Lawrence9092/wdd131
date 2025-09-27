@@ -44,6 +44,12 @@ section {
   }
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @media (min-width: 640px) {
   .hero picture {
     display: flex;
@@ -51,6 +57,22 @@ section {
     align-items: center;
     margin: 10px;
   }
+}
+
+@media (max-width: 640px) {
+    .data {
+        margin: 0 0.3rem;
+        padding: 10px;
+        border: 1px solid var(--primary-color);
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .data h2 {
+        text-align: center;
+        padding: 10px;
+    }
 }
 
 @media (min-width: 640px) {
@@ -63,6 +85,18 @@ section {
         padding: 10px;
     }
 }
+
+@media (max-width: 640px) {
+    .data p {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5px 0;
+        gap: 10px;
+        font-size: 1.1rem;
+    }
+}
+
+
 
 footer {
   background: #f4f4f4;
