@@ -3,76 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Country Page | Japan</title>
-  <!-- CSS Link -->
+  <title>Japan - Country Page</title>
   <link rel="stylesheet" href="css/place.css">
-  <!-- JavaScript Link -->
   <script defer src="js/place.js"></script>
 </head>
 <body>
   <header>
     <h1>Japan</h1>
-    <nav>
-      <ul>
-        <li><a href="#history">History</a></li>
-        <li><a href="#culture">Culture</a></li>
-        <li><a href="#food">Food</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Hero section with responsive images -->
+    <!-- Hero Image -->
     <section class="hero">
       <picture>
-        <!-- Large image for wide screens -->
         <source media="(min-width: 1000px)" srcset="images/hero-large.WEBP">
-        <!-- Medium image for tablet-size screens -->
         <source media="(min-width: 500px)" srcset="images/hero-medium.WEBP">
-        <!-- Fallback / small image -->
-        <img src="images/hero-small.WEBP" 
+        <img src="images/hero-small.jpg" 
              alt="Mount Fuji and cherry blossoms in Japan" 
              width="1500" height="750">
       </picture>
-      <h2>Land of the Rising Sun</h2>
     </section>
 
+    <!-- Data Section -->
+    <section id="data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 377,975 sq km</li>
+        <li><strong>Population:</strong> 125,700,000</li>
+        <li><strong>Capital:</strong> Tokyo</li>
+        <li><strong>Languages:</strong> Japanese</li>
+        <li><strong>Currency:</strong> Japanese Yen (¥)</li>
+        <li><strong>Time Zone:</strong> UTC+9</li>
+        <li><strong>Calling Code:</strong> +81</li>
+        <li><strong>Internet TLD:</strong> .jp</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
     <section id="weather">
       <h2>Weather <span class="weather-icon">⛅</span></h2>
       <div class="weather-box">
-        <p>Tokyo, Japan</p>
-        <p>Temperature: 22°C</p>
-        <p>Condition: Partly Cloudy</p>
+        <p><strong>Temperature:</strong> 22 °C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> 10 km/h</p>
+        <p><strong>Wind Chill:</strong> 21 °C</p>
       </div>
-    </section>
-
-    <!-- Content sections following wireframe -->
-    <section id="history">
-      <h2>History</h2>
-      <p>Japan’s history spans thousands of years, blending ancient traditions with modern advancements.</p>
-    </section>
-
-    <section id="culture">
-      <h2>Culture</h2>
-      <p>From tea ceremonies and temples to anime and technology, Japanese culture is a balance of old and new.</p>
-    </section>
-
-    <section id="food">
-      <h2>Food</h2>
-      <p>Sushi, ramen, tempura, and matcha are famous worldwide and represent Japan’s diverse cuisine.</p>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <img src="images/sushi.WEBP" alt="Sushi platter" width="400" height="300">
-      <img src="images/temple.WEBP" alt="Traditional Japanese temple" width="400" height="300">
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 | Lawrence Ngwenya | WDD131 - Country Page Assignment</p>
+    <p>&copy; 2025 | Lawrence Ngwenya | Japan</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
-
