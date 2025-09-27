@@ -16,8 +16,8 @@
     <!-- Hero Image -->
     <section class="hero">
       <picture>
-        <source media="(min-width: 1000px)" srcset="images/hero-large.WEBP">
-        <source media="(min-width: 500px)" srcset="images/hero-medium.WEBP">
+        <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+        <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
         <img src="images/hero-small.jpg" 
              alt="Mount Fuji and cherry blossoms in Japan" 
              width="1500" height="750">
@@ -46,13 +46,14 @@
         <p><strong>Temperature:</strong> 22 °C</p>
         <p><strong>Conditions:</strong> Partly Cloudy</p>
         <p><strong>Wind:</strong> 10 km/h</p>
-        <p><strong>Wind Chill:</strong> 21 °C</p>
+        <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
       </div>
     </section>
   </main>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025  Lawrence Ngwenya  Japan</p>
+    <p>&copy; <span id="currentYear"></span> Lawrence Ngwenya | Japan</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
