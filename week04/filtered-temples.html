@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 740px)">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <span class="site-title">Temple Album</span>
+      <button class="hamburger" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-icon" aria-hidden="true">☰</span>
+      </button>
+    </div>
+
+    <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a class="nav-link" href="#">Home</a></li>
+        <li><a class="nav-link" href="#">Old</a></li>
+        <li><a class="nav-link" href="#">New</a></li>
+        <li><a class="nav-link" href="#">Large</a></li>
+        <li><a class="nav-link" href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-heading">Temple Gallery</h1>
+
+    <!-- Empty container – JS will inject temple figures here -->
+    <section class="gallery" aria-label="Temples gallery" id="gallery"></section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>© <span id="year"></span> Lawrence Ngwenya — Last modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
+
