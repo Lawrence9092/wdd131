@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover key facts and weather about Japan including geography, population, culture, and climate.">
   <title>Japan - Country Page</title>
   <link rel="stylesheet" href="place.css">
   <script defer src="place.js"></script>
@@ -19,14 +20,14 @@
         <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
         <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
         <img src="images/hero-small.webp" 
-             alt="Mount Fuji and cherry blossoms in Japan" 
-             width="1500" height="750">
+             alt="Mount Fuji with cherry blossoms in Japan" 
+             width="1500" height="750" loading="lazy">
       </picture>
     </section>
 
     <!-- Data Section -->
     <section id="data">
-      <h2>Data</h2>
+      <h2>Country Data</h2>
       <ul>
         <li><strong>Area:</strong> 377,975 sq km</li>
         <li><strong>Population:</strong> 125,700,000</li>
@@ -41,7 +42,9 @@
 
     <!-- Weather Section -->
     <section id="weather">
-      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <h2>Weather <span class="weather-icon">
+        <img src="images/weather.svg" alt="Weather icon" width="30" height="30">
+      </span></h2>
       <div class="weather-box">
         <p><strong>Temperature:</strong> 22 °C</p>
         <p><strong>Conditions:</strong> Partly Cloudy</p>

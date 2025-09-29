@@ -54,8 +54,15 @@ section {
 
 .weather-icon {
   display: none;
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
+}
+
+/* Pseudo-element emoticon (desktop only) */
+@media (min-width: 900px) {
+  #weather h2::after {
+    content: " ☀️";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
 }
 
 /* Footer */
@@ -69,7 +76,7 @@ footer {
 /* Media Queries */
 @media (min-width: 600px) {
   .weather-icon {
-    display: inline;
+    display: inline-block;
   }
 }
 
