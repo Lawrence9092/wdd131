@@ -1,31 +1,29 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // ================================
-  // 1) Footer date updates
-  // ================================
+document.addEventListener('DOMContentLoaded', () => {
+  // -------------------
+  // Footer date updates
+  // -------------------
   const yearEl = document.getElementById('year');
   const lmEl = document.getElementById('last-modified');
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
   if (lmEl) {
     try {
-      const raw = document.lastModified;
-      const date = new Date(raw);
-      lmEl.textContent = !isNaN(date.getTime()) ? date.toLocaleString() : raw || 'Unknown';
+      const date = new Date(document.lastModified);
+      lmEl.textContent = !isNaN(date.getTime()) ? date.toLocaleString() : document.lastModified || 'Unknown';
     } catch {
       lmEl.textContent = document.lastModified || 'Unknown';
     }
   }
 
-  // ================================
-  // 2) Hamburger menu toggling
-  // ================================
+  // -------------------
+  // Hamburger menu
+  // -------------------
   const header = document.querySelector('.site-header');
   const btn = document.querySelector('.hamburger');
   const nav = document.getElementById('primary-nav');
 
   if (btn && header && nav) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', () => {
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
       header.classList.toggle('nav-open');
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (icon) icon.textContent = expanded ? '☰' : '✕';
     });
 
-    nav.addEventListener('click', function (e) {
+    nav.addEventListener('click', (e) => {
       if (e.target && e.target.matches('a')) {
         header.classList.remove('nav-open');
         btn.setAttribute('aria-expanded', 'false');
@@ -45,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ================================
-  // 3) Temple array
-  // ================================
+  // -------------------
+  // Temple data
+  // -------------------
   const temples = [
     { templeName: "Aba Nigeria", location: "Aba, Nigeria", dedicated: "2005, August, 7", area: 11500, imageUrl: "images/aba-temple.jpg" },
     { templeName: "Accra Ghana", location: "Accra, Ghana", dedicated: "2004, January, 11", area: 17500, imageUrl: "images/accra-temple.jpg" },
@@ -62,61 +60,54 @@ document.addEventListener('DOMContentLoaded', function () {
     { templeName: "Santiago Chile", location: "Santiago, Chile", dedicated: "2002, July, 21", area: 19500, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/41/Santiago_Temple.jpg" }
   ];
 
-  // ================================
-  // 4) Render temples
-  // ================================
+  // -------------------
+  // Render function
+  // -------------------
   const gallery = document.getElementById("gallery");
 
-  function renderTemples(templesArray) {
-    gallery.innerHTML = ''; // clear previous content
-    templesArray.forEach(temple => {
-      const figure = document.createElement("figure");
+  function renderTemples(list) {
+    gallery.innerHTML = '';
+    list.forEach(t => {
+      const figure = document.createElement('figure');
       figure.innerHTML = `
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
         <figcaption>
-          <strong>${temple.templeName}</strong><br>
-          ${temple.location}<br>
-          Dedicated: ${temple.dedicated}<br>
-          Area: ${temple.area.toLocaleString()} sq ft
+          <strong>${t.templeName}</strong><br>
+          ${t.location}<br>
+          Dedicated: ${t.dedicated}<br>
+          Area: ${t.area.toLocaleString()} sq ft
         </figcaption>
       `;
       gallery.appendChild(figure);
     });
   }
 
-  // Initial render: show all temples
+  // Initial render
   renderTemples(temples);
 
-  // ================================
-  // 5) Navigation filtering
-  // ================================
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+  // -------------------
+  // Navigation filtering
+  // -------------------
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
       e.preventDefault();
       const filter = link.textContent.toLowerCase();
       let filtered = temples;
 
       switch (filter) {
-        case 'old': // built before 1900
-          filtered = temples.filter(t => {
-            const year = new Date(t.dedicated).getFullYear();
-            return year < 1900;
-          });
+        case 'old':
+          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
           break;
-        case 'new': // built after 2000
-          filtered = temples.filter(t => {
-            const year = new Date(t.dedicated).getFullYear();
-            return year > 2000;
-          });
+        case 'new':
+          filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
           break;
-        case 'large': // larger than 90,000 sq ft
+        case 'large':
           filtered = temples.filter(t => t.area > 90000);
           break;
-        case 'small': // smaller than 10,000 sq ft
+        case 'small':
           filtered = temples.filter(t => t.area < 10000);
           break;
-        case 'home': // all temples
+        case 'home':
         default:
           filtered = temples;
       }
