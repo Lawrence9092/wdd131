@@ -1,51 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // -------------------
   // Footer date updates
-  // -------------------
-  const yearEl = document.getElementById('year');
-  const lmEl = document.getElementById('last-modified');
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('last-modified').textContent = document.lastModified;
 
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-  if (lmEl) {
-    try {
-      const date = new Date(document.lastModified);
-      lmEl.textContent = !isNaN(date.getTime()) ? date.toLocaleString() : document.lastModified || 'Unknown';
-    } catch {
-      lmEl.textContent = document.lastModified || 'Unknown';
-    }
-  }
-
-  // -------------------
-  // Hamburger menu
-  // -------------------
-  const header = document.querySelector('.site-header');
-  const btn = document.querySelector('.hamburger');
-  const nav = document.getElementById('primary-nav');
-
-  if (btn && header && nav) {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      header.classList.toggle('nav-open');
-      btn.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
-      const icon = btn.querySelector('.hamburger-icon');
-      if (icon) icon.textContent = expanded ? '☰' : '✕';
-    });
-
-    nav.addEventListener('click', (e) => {
-      if (e.target && e.target.matches('a')) {
-        header.classList.remove('nav-open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-label', 'Open navigation');
-        const icon = btn.querySelector('.hamburger-icon');
-        if (icon) icon.textContent = '☰';
-      }
-    });
-  }
-
-  // -------------------
-  // Temple data (new URLs integrated)
-  // -------------------
+  // Temple data
   const temples = [
     {
       templeName: "Aba Nigeria",
@@ -96,26 +54,23 @@ document.addEventListener('DOMContentLoaded', () => {
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     }
-    // Add more temple objects if desired
   ];
 
-  // -------------------
-  // Render function
-  // -------------------
   const gallery = document.getElementById("gallery");
 
+  // Render function
   function renderTemples(list) {
     gallery.innerHTML = '';
     list.forEach(t => {
       const figure = document.createElement('figure');
       figure.innerHTML = `
-        <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
         <figcaption>
           <strong>${t.templeName}</strong><br>
-          ${t.location}<br>
-          Dedicated: ${t.dedicated}<br>
-          Area: ${t.area.toLocaleString()} sq ft
+          <span><b>Location:</b> ${t.location}</span><br>
+          <span><b>Dedicated:</b> ${t.dedicated}</span><br>
+          <span><b>Size:</b> ${t.area.toLocaleString()} sq ft</span>
         </figcaption>
+        <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
       `;
       gallery.appendChild(figure);
     });
@@ -124,9 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial render
   renderTemples(temples);
 
-  // -------------------
   // Navigation filtering
-  // -------------------
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
