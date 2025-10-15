@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <p>Your review has been submitted successfully.</p>
+    <p>You have submitted <strong id="reviewCount"></strong> review(s) so far.</p>
+    <a href="form.html">Submit another review</a>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Lawrence Ngwenya</p>
+  </footer>
+
+  <script>
+    // Increase review count in localStorage
+    const count = parseInt(localStorage.getItem("reviewCount") || "0") + 1;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("reviewCount").textContent = count;
+
+    // Set footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
