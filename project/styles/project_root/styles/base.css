@@ -1,0 +1,141 @@
+/* ===============================
+   Base Styles - Business & Investment Resource Hub
+   Author: Lawrence Ngwenya
+   =============================== */
+
+/* 🌈 Color Variables (Zimbabwe Flag Inspired) */
+:root {
+  --primary-color: #006400; /* Green */
+  --secondary-color: #FFD700; /* Gold */
+  --accent-color: #D21034; /* Red */
+  --background-color: #FFFFFF;
+  --text-color: #000000;
+  --light-gray: #f9f9f9;
+  --heading-font: "Bebas Neue", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+}
+
+/* ✅ Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Body */
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Container (consistent horizontal padding) */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ Headings */
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ✅ Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* ✅ Header + Navigation */
+header.site-header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  color: var(--background-color);
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: var(--background-color);
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+/* ✅ Footer */
+footer.site-footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  border-top: 4px solid var(--secondary-color);
+}
+
+footer a {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* ✅ Buttons */
+button,
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover,
+input[type="submit"]:hover {
+  background-color: #004d00;
+}
+
+/* ✅ Utilities */
+.text-center {
+  text-align: center;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* ✅ Accessibility Focus Outline */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
