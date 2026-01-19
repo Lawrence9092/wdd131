@@ -1,3 +1,13 @@
 .temple-grid {
   grid-template-columns: repeat(3, 1fr);
 }
+
+/* Hide hamburger button on large screens */
+#menuButton {
+  display: none;
+}
+
+/* Always show nav menu on large screens */
+#navMenu {
+  display: flex;
+}
