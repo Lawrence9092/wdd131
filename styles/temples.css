@@ -10,9 +10,15 @@ body {
 }
 
 header {
+  margin-bottom: 20px;
   background-color: #bbb;
   padding: 1rem;
   box-shadow: 0 0 10px #333;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 header,
@@ -21,7 +27,11 @@ main {
   margin: 0 auto;
 }
 
-nav {
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
   background-color: #36454f;
 }
 
@@ -57,6 +67,11 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-weight: bold;
 }
 
 footer {
