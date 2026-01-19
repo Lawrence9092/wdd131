@@ -55,10 +55,20 @@ nav a:hover {
 }
 
 main {
-  display: grid;
   gap: 1rem;
   padding: 1rem;
 }
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.temple-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 
 figure {
   text-align: center;
