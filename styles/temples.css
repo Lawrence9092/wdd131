@@ -21,6 +21,9 @@ header h1 {
     margin-bottom: 10px;
 }
 
+h1 {
+    text-align: center;
+}
 header,
 main {
   max-width: 900px;
