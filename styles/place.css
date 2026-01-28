@@ -1,0 +1,99 @@
+/* ---------- CSS VARIABLES ---------- */
+:root {
+  --primary: #ce1126;
+  --secondary: #007a3d;
+  --light: #ffffff;
+  --dark: #222222;
+  --bg: #f2f7f2;
+}
+
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ---------- LAYOUT ---------- */
+.place-layout {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* ---------- HERO ---------- */
+.hero img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid var(--primary);
+}
+
+/* ---------- CARDS ---------- */
+.data-card,
+.weather-card {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.data-card h2,
+.weather-card h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.data-card ul,
+.weather-card ul {
+  list-style: none;
+}
+
+.weather-icon {
+  width: 50px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--secondary);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- MEDIA QUERY (WIDE VIEW) ---------- */
+@media (min-width: 900px) {
+  .place-layout {
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  /* Weather emoji using pseudo-element */
+  .weather-card h2::after {
+    content: " ⛅";
+  }
+
+  .weather-icon {
+    display: none;
+  }
+}
