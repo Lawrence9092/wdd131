@@ -4,63 +4,63 @@ const temples = [
     location: "Kirtland, Ohio, United States",
     dedicated: "1836-03-27",
     area: 15000,
-    imageUrl: "../images/kirtland-temple-ohio-usa.jpg"
+    imageUrl: "./images/kirtland-temple-ohio-usa.jpg"
   },
   {
     templeName: "Salt Lake Temple",
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893-04-06",
     area: 253000,
-    imageUrl: "../images/salt-lake-temple-utah-usa.jpg"
+    imageUrl: "./images/salt-lake-temple-utah-usa.jpg"
   },
   {
     templeName: "Laie Hawaii Temple",
     location: "Laie, Hawaii, United States",
     dedicated: "1919-11-27",
     area: 42100,
-    imageUrl: "../images/laie-hawaii-temple-usa.jpg"
+    imageUrl: "./images/laie-hawaii-temple-usa.jpg"
   },
   {
     templeName: "Provo City Center Temple",
     location: "Provo, Utah, United States",
     dedicated: "2016-03-20",
     area: 85000,
-    imageUrl: "../images/provo-city-center-temple-utah.jpg"
+    imageUrl: "./images/provo-city-center-temple-utah.jpg"
   },
   {
     templeName: "Rome Italy Temple",
     location: "Rome, Italy",
     dedicated: "2019-03-10",
     area: 40000,
-    imageUrl: "../images/rome-italy-temple.jpg"
+    imageUrl: "./images/rome-italy-temple.jpg"
   },
   {
     templeName: "Paris France Temple",
     location: "Paris, France",
     dedicated: "2017-05-21",
     area: 44000,
-    imageUrl: "../images/paris-france-temple.jpg"
+    imageUrl: "./images/paris-france-temple.jpg"
   },
   {
     templeName: "Hong Kong China Temple",
     location: "Hong Kong, China",
     dedicated: "1996-05-26",
     area: 22000,
-    imageUrl: "../images/hong-kong-china-temple.jpg"
+    imageUrl: "./images/hong-kong-china-temple.jpg"
   },
   {
     templeName: "Manti Utah Temple",
     location: "Manti, Utah, United States",
     dedicated: "1888-05-21",
     area: 100000,
-    imageUrl: "../images/manti-utah-temple.jpg"
+    imageUrl: "./images/manti-utah-temple.jpg"
   },
   {
     templeName: "Boston Massachusetts Temple",
     location: "Belmont, Massachusetts, United States",
     dedicated: "2000-10-01",
     area: 69000,
-    imageUrl: "../images/boston-massachusetts-temple.jpg"
+    imageUrl: "./images/boston-massachusetts-temple.jpg"
   }
 ];
 
