@@ -4,14 +4,14 @@ const temples = [
     location: "Kirtland, Ohio, United States",
     dedicated: "1836-03-27",
     area: 15000,
-    imageUrl: "..https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1080x1350.jpg"
+    imageUrl: ".https://churchofjesuschristtemples.org/assets/img/temples/kirtland-temple/kirtland-temple-1080x1350.jpg"
   },
   {
     templeName: "Salt Lake Temple",
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893-04-06",
     area: 253000,
-    imageUrl: "..https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-1080x1350.jpg"
+    imageUrl: ".https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-1080x1350.jpg"
   },
   {
     templeName: "Laie Hawaii Temple",
