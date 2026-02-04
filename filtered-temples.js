@@ -1,12 +1,5 @@
 const temples = [
   {
-    templeName: "Kirtland Temple",
-    location: "Kirtland, Ohio, United States",
-    dedicated: "1836-03-27",
-    area: 15000,
-    imageUrl: "./images/kirtland-temple-ohio-usa.jpg"
-  },
-  {
     templeName: "Salt Lake Temple",
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893-04-06",
