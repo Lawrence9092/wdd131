@@ -11,56 +11,56 @@ const temples = [
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893-04-06",
     area: 253000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-1080x1350.jpg"
+    imageUrl: "../images/salt-lake-temple-utah-usa.jpg"
   },
   {
     templeName: "Laie Hawaii Temple",
     location: "Laie, Hawaii, United States",
     dedicated: "1919-11-27",
     area: 42100,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/laie-hawaii-temple/laie-hawaii-temple-1080x1350.jpg"
+    imageUrl: "../images/laie-hawaii-temple-usa.jpg"
   },
   {
     templeName: "Provo City Center Temple",
     location: "Provo, Utah, United States",
     dedicated: "2016-03-20",
     area: 85000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/provo-city-center-temple/provo-city-center-temple-1080x1350.jpg"
+    imageUrl: "../images/provo-city-center-temple-utah.jpg"
   },
   {
     templeName: "Rome Italy Temple",
     location: "Rome, Italy",
     dedicated: "2019-03-10",
     area: 40000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-1080x1350.jpg"
+    imageUrl: "../images/rome-italy-temple.jpg"
   },
   {
     templeName: "Paris France Temple",
     location: "Paris, France",
     dedicated: "2017-05-21",
     area: 44000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-1080x1350.jpg"
+    imageUrl: "../images/paris-france-temple.jpg"
   },
   {
     templeName: "Hong Kong China Temple",
     location: "Hong Kong, China",
     dedicated: "1996-05-26",
     area: 22000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/hong-kong-china-temple/hong-kong-china-temple-1080x1350.jpg"
+    imageUrl: "../images/hong-kong-china-temple.jpg"
   },
   {
     templeName: "Manti Utah Temple",
     location: "Manti, Utah, United States",
     dedicated: "1888-05-21",
     area: 100000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-1080x1350.jpg"
+    imageUrl: "../images/manti-utah-temple.jpg"
   },
   {
     templeName: "Boston Massachusetts Temple",
     location: "Belmont, Massachusetts, United States",
     dedicated: "2000-10-01",
     area: 69000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/boston-massachusetts-temple/boston-massachusetts-temple-1080x1350.jpg"
+    imageUrl: "boston-massachusetts-temple.jpg"
   }
 ];
 
