@@ -60,7 +60,7 @@ const temples = [
     location: "Belmont, Massachusetts, United States",
     dedicated: "2000-10-01",
     area: 69000,
-    imageUrl: "boston-massachusetts-temple.jpg"
+    imageUrl: "../images/boston-massachusetts-temple.jpg"
   }
 ];
 
