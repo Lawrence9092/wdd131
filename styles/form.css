@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.form-group,
+fieldset {
+  margin-bottom: 1.25rem;
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: #f9a825;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #fbc02d;
+}
+
+.confirmation {
+  text-align: center;
+}
