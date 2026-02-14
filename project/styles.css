@@ -77,3 +77,12 @@ nav ul.open {
     gap: 1.5rem;
   }
 
+
+  footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  background-color: var(--primary);
+  color: white;
+}
+
