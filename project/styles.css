@@ -22,7 +22,29 @@ header {
   background: var(--primary);
   color: white;
   padding: 1rem;
+  text-align: center; 
 }
+
+main {
+  max-width: 1100px;   /* controls width */
+  margin: 0 auto;      /* centers the content */
+  padding: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+
 
 /* Navigation */
 nav ul {
@@ -36,11 +58,14 @@ nav ul.open {
 }
 
 /* Desktop View */
+
 @media (min-width: 768px) {
   nav ul {
     display: flex;
-    gap: 1rem;
+    justify-content: center;  /* centers nav horizontally */
+    gap: 2rem;
   }
+}
 
   #menuBtn {
     display: none;
@@ -51,4 +76,4 @@ nav ul.open {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-}
+
