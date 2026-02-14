@@ -1,0 +1,54 @@
+:root {
+  --primary: #2E7D32;
+  --secondary: #F9A825;
+  --light: #F5F5F5;
+  --dark: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
